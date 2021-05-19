@@ -2,6 +2,8 @@ package com.test.hmapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.NotificationManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,11 +11,14 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.test.hmapp.GridViwe.GridAdapter;
+import com.test.hmapp.Pressure.PressureActivity;
 
 public class MainActivity extends AppCompatActivity {
     private GridView gvList;
     private String [] text_item={"血壓","血糖","定時","Exit"};
     private int[] img_item={R.drawable.pressure,R.drawable.sugar,R.drawable.alarm,R.drawable.exit};
+    private Intent intent;
+    private NotificationManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         //血壓
                         Toast.makeText(MainActivity.this, "你選取了" + text_item[+position], Toast.LENGTH_SHORT).show();
-                        //intent=new Intent(MainActivity.this,PressureActivity.class);
-                        //startActivity(intent);
+                        intent=new Intent(MainActivity.this, PressureActivity.class);
+                        startActivity(intent);
                         break;
                     case 1:
                         //血糖

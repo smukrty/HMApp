@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="10/05"
+        android:textSize="50dp" />
+    <TextView
+        android:id="@+id/txtHigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtDate"
+        android:layout_marginLeft="5dp"
+        android:textSize="25dp"
+        android:text="收縮壓" />
+    <TextView
+        android:id="@+id/txtLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtDate"
+        android:layout_below="@+id/txtHigh"
+        android:layout_marginLeft="5dp"
+        android:layout_alignRight="@+id/txtHigh"
+        android:textSize="25dp"
+        android:text="舒張壓" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHigh"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15dp"
+            android:text="脈搏" />
+        <TextView
+            android:id="@+id/txtBump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="100" />
+    </LinearLayout>
+
+</RelativeLayout>

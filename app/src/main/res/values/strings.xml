@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HMApp</string>
+    <string name="float_text">+</string>
 </resources>
