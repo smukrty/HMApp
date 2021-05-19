@@ -26,7 +26,36 @@ public class MainActivity extends AppCompatActivity {
         gvList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "你選取了" + text_item[+position], Toast.LENGTH_SHORT).show();
+                switch (position){
+                    case 0:
+                        //血壓
+                        Toast.makeText(MainActivity.this, "你選取了" + text_item[+position], Toast.LENGTH_SHORT).show();
+                        //intent=new Intent(MainActivity.this,PressureActivity.class);
+                        //startActivity(intent);
+                        break;
+                    case 1:
+                        //血糖
+                        Toast.makeText(MainActivity.this, "你選取了" + text_item[+position], Toast.LENGTH_SHORT).show();
+                        //intent=new Intent(MainActivity.this, SugerActivity.class);
+                        //startActivity(intent);
+                        break;
+                    case 2:
+                        //定時
+                        Toast.makeText(MainActivity.this, "你選取了" + text_item[+position], Toast.LENGTH_SHORT).show();
+                        //intent=new Intent(MainActivity.this, TimeAlarmActivity.class);
+                        //startActivity(intent);
+                        break;
+                    case 3:
+                        Toast.makeText(MainActivity.this, "你選取了" + text_item[+position], Toast.LENGTH_SHORT).show();
+                        finish();
+                        break;
+                    default: {
+                        Toast.makeText(MainActivity.this, "錯誤", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+
+
+                }
             }
         });
     }
